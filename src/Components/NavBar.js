@@ -61,7 +61,7 @@ const NavBar = () => {
                     <Nav.Link 
                         as={Link} 
                         to="/" 
-                        className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} 
+                        className={activeLink === 'home' ? 'active navbar-link no-underline' : 'navbar-link no-underline'} 
                         onClick={() => onUpdateActiveLink('home')}
                     >
                         Home
@@ -69,7 +69,7 @@ const NavBar = () => {
                     <Nav.Link 
                         as={Link} 
                         to="/favorites" 
-                        className={activeLink === 'favorites' ? 'active navbar-link' : 'navbar-link'} 
+                        className={activeLink === 'favorites' ? 'active navbar-link no-underline' : 'navbar-link no-underline'} 
                         onClick={() => onUpdateActiveLink('favorites')}
                     >
                         Favorites
