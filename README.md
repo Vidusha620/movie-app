@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Movie App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+View: (https://splendid-axolotl-4cabde.netlify.app/)
 
-## Available Scripts
+A modern React application for browsing and discovering movies using The Movie Database (TMDB) API. This project features a responsive design with both light and dark themes, advanced filtering capabilities, and user-friendly navigation.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### Core Functionality
+- **Browse Popular Movies**: View trending and popular movies from TMDB
+- **Search Movies**: Find specific movies by title or keywords
+- **Movie Details**: View comprehensive information about each movie
+- **Favorites System**: Save and manage your favorite movies
+- **Theme Toggle**: Switch between light and dark themes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Advanced Features
+- **Filtering System**: Filter movies by:
+  - Genre (Action, Comedy, Drama, etc.)
+  - Release Year (last 20 years)
+  - Rating (5+ to 9+ stars)
+- **Infinite Scrolling**: Seamlessly load more content as you scroll down
+- **Responsive Design**: Optimized for mobile, tablet, and desktop devices
+- **Persistent Storage**: Favorites and preferences are saved in local storage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: Frontend library for building user interfaces (v18.2.0)
+- **React Router**: For navigation and routing (v6.22.0)
+- **React Bootstrap**: UI component library
+- **Context API**: For state management across components
+- **TMDB API**: For fetching movie data
+- **CSS**: Custom styling with responsive design
+- **Local Storage**: For persisting user preferences
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Setup
 
-### `npm run build`
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/movie-app.git
+   cd movie-app
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. Create a `.env` file in the root directory with the following content:
+   ```
+   GENERATE_SOURCEMAP=false
+   SKIP_PREFLIGHT_CHECK=true
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project uses The Movie Database (TMDB) API to fetch movie data. The following endpoints are used:
 
-## Learn More
+- `/movie/popular` - Get a list of popular movies
+- `/search/movie` - Search for movies by title
+- `/movie/{movie_id}` - Get detailed information about a specific movie
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The API key is included in the project for demonstration purposes. In a production environment, you should use environment variables to store sensitive information.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
 
-### Code Splitting
+The application is configured for easy deployment to Netlify. A `netlify.toml` file is included with the necessary configuration for handling SPA routing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+/src
+  /components       # Reusable UI components
+  /context         # Context providers for state management
+  /pages           # Main page components
+  App.js           # Main application component
+  App.css          # Global styles
+  index.js         # Entry point
+```
 
-### Analyzing the Bundle Size
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- User authentication system
+- User ratings and reviews
+- Personalized movie recommendations
+- Movie watchlist functionality
+- Advanced search filters
+- Movie trailers and video content
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Advanced Configuration
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [The Movie Database (TMDB)](https://www.themoviedb.org/) for providing the API
+- [Create React App](https://github.com/facebook/create-react-app) for the project setup
+- [React Router](https://reactrouter.com/) for navigation
+- [React Bootstrap](https://react-bootstrap.github.io/) for UI components
