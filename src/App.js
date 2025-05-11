@@ -1,10 +1,10 @@
 
 import './App.css';
 import{ BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './Pages/Home.js';
-import MovieDetails from './Pages/MovieDetails.js';
-import Favorites from './Pages/Favorites.js';
-import SearchResults from './Pages/SearchResults.js';
+import Home from './pages/Home.js';
+import MovieDetails from './pages/MovieDetails.js';
+import Favorites from './pages/Favorites.js';
+import SearchResults from './pages/SearchResults.js';
 import NavBar from './Components/NavBar.js';
 import Header from './Components/Header.js';
 import { ThemeProvider } from './context/ThemeContext';
